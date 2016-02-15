@@ -1,0 +1,50 @@
+use vars qw($userspath $spool $memberfile $templates $sendmail $images $language $sid $latex $gzip $dvipdf $jquery_enabled %pref);
+
+# path to user configuration files
+$userspath = "users";
+
+# spool directory for batch printing
+$spool = "spool";
+
+# templates base directory
+$templates = "templates";
+
+# member file
+$memberfile = "users/members";
+
+# location of sendmail
+$sendmail = "| /usr/sbin/sendmail -t";
+
+# location for images
+$images = "images";
+
+# set language for login and admin
+$language = "";
+
+# if you have latex installed set to 1
+#$latex = 1;
+
+# program to use for file compression
+#$gzip = "gzip -S .gz";
+
+# use dvipdf instead of pdflatex for PDF
+#$dvipdf = 1;
+
+# if the server can't find gzip or latex add the path
+#$ENV{PATH} .= ":/usr/local/bin";
+
+# Folders with read and write access
+@accessfolders = qw|templates css|;
+
+# jQuery integration is currently experimental. To enable set $jquery_enabled to 1
+$jquery_enabled = 1;
+
+# Preferences to customize sql-ledger.
+$pref{remove_payment_on_post_as_new} = 1; # Set to 0 to preserve payment
+
+$pref{closed_checked} = 'checked'; # Set to empty string ('') to make closed unchecked by default
+
+$pref{partsgroup_autocomplete} = 1;  # Set to 1 to enable partsgroup autocomplete lookup
+
+1;
+
