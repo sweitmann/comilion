@@ -329,7 +329,7 @@ sub list_transactions {
   $form->{prevreport} = $form->escape($form->{prevreport},1);
  
   $form->{callback} = "$form->{script}?action=list_transactions&department=$department&projectnumber=$projectnumber&title=$title";
-  for (qw(path direction oldsort accno login fromdate todate accounttype gifi_accno l_heading l_subtotal l_accno prevreport)) { $form->{callback} .= "&$_=$form->{$_}" }
+  for (qw(path direction oldsort accno login fromdate todate accounttype gifi_accno l_heading l_subtotal l_accno prevreport fx_transaction)) { $form->{callback} .= "&$_=$form->{$_}" }
 
   $form->helpref("account_transactions", $myconfig{countrycode});
   
